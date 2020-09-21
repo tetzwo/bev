@@ -1,0 +1,17 @@
+.title {
+  display: block;
+  margin: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  color: #fec2c2;
+  @media (min-width: 768px) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  @media (min-width: 992px) {
+    font-size: 90px;
+    line-height: 90px;
+  }
+}
