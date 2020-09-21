@@ -16,7 +16,7 @@ export default function Layout({ children }) {
         <Container>
           <div className={layoutStyles.content}>
             <Link to="/" className={layoutStyles.logo}>
-              <img src="/img/baise-en-ville-logo_x2.png" alt="" />
+              <img src="/img/baise-en-ville-logo_x2.png" alt="Baise-en-ville Skateboards" />
             </Link>
 
             <ul className={layoutStyles.nav}>
