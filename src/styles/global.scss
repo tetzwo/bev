@@ -6,23 +6,29 @@ html {
 }
 
 body {
-  padding-top: 80px;
+  padding-top: 50px;
   font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
   color: #777;
   @media (min-width: 768px) {
     padding-top: 130px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 img {
   display: block;
   max-width: 100%;
-  &.center {
-    margin: 0 auto;
-  }
-  &.mw930 {
-    width: 930px;
-  }
+}
+
+.center {
+  margin: 0 auto;
+}
+.mw1110 {
+  width: 1110px;
+  max-width: 100%;
 }
 
 h2 {
@@ -50,9 +56,12 @@ p:last-child {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  height: 300px;
+  height: 160px;
   width: 100%;
   background-color: #fee1de;
+  @media (min-width: 768px) {
+    height: 300px;
+  }
   &.highlight-home {
     height: 500px;
     background: url(/img/home_couv.jpg) no-repeat center center;
@@ -60,5 +69,28 @@ p:last-child {
   }
   &.highlight-contact {
     background-color: #f6f6f6;
+  }
+  &.highlight-product {
+    background-color: #f6f6f6;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  &-item {
+    padding-right: 4px;
+    &.active::after {
+      display: none;
+    }
+    &::after {
+      content: " /";
+    }
+    a {
+      color: #777;
+    }
   }
 }

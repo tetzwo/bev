@@ -1,0 +1,25 @@
+.product {
+  &-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333;
+  }
+  &-price {
+    display: block;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333;
+  }
+  &-shipping {
+    margin-bottom: 30px;
+  }
+  &-contact {
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 3px solid #ffc2c1;
+  }
+}

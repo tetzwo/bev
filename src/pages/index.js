@@ -1,11 +1,13 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import ContainerFluid from "../components/container-fluid"
 import Highlight from "../components/highlight"
 import indexStyles from "./index.module.scss"
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <Layout>
       <Highlight highlightText="baise-en-ville skateboards" highlightClass="highlight-home" />
@@ -14,12 +16,10 @@ export default function Home() {
         <Container>
           <div className="row">
             <div className="col-6 col-md-6">
-              {/* <a href="#">cruisers complets</a> */}
-              <img src="/img/home_gauche.jpg" alt="" />
+              <Img fluid={data.imageOne.childImageSharp.fluid} />
             </div>
             <div className="col-6 col-md-6">
-              {/* <a href="#">planches seules</a> */}
-              <img src="/img/home_droit.jpg" alt="" />
+              <Img fluid={data.imageTwo.childImageSharp.fluid} />
             </div>
           </div>
         </Container>
@@ -50,9 +50,33 @@ export default function Home() {
         </Container>
 
         <ContainerFluid>
-          <img src="/img/apropos_easyconcept.jpg" className="center mw930" alt="" />
+          <Img fluid={data.imageThree.childImageSharp.fluid} className="center mw1110" />
         </ContainerFluid>
       </section>
     </Layout>
   )
 }
+
+export const fluidImage = graphql`
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid_withWebp
+      }
+    }
+  }
+`;
+
+export const pageQuery = graphql`
+  query {
+    imageOne: file(relativePath: { eq: "home_gauche.jpg" }) {
+      ...fluidImage
+    }
+    imageTwo: file(relativePath: { eq: "home_droit.jpg" }) {
+      ...fluidImage
+    }
+    imageThree: file(relativePath: { eq: "apropos_easyconcept.jpg" }) {
+      ...fluidImage
+    }
+  }
+`;
