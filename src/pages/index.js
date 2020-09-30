@@ -10,7 +10,7 @@ import indexStyles from "./index.module.scss"
 export default function Home({ data }) {
   return (
     <Layout>
-      <Highlight highlightText="baise-en-ville skateboards" highlightClass="highlight-home" />
+      <Highlight highlightText="baise-en-ville skateboards" highlightClass="highlight-home" highlightImg="home_couv.jpg" />
 
       <section className={indexStyles.section}>
         <Container>

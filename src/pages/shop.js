@@ -6,6 +6,9 @@ import Highlight from "../components/highlight"
 import shopStyles from "./shop.module.scss"
 
 export default function Shop({ data }) {
+  console.log(data.allDataJson.edges)
+  console.log(data.allImages)
+
   return (
     <Layout>
       <Highlight highlightText="Easy Shop" highlightClass="highlight-shop" />
@@ -54,6 +57,17 @@ export const query = graphql`
           price
           image
           slug
+        }
+      }
+    }
+    allImages: allFile {
+      edges {
+        node {
+          childImageSharp {
+            fluid {
+              originalName
+            }
+          }
         }
       }
     }

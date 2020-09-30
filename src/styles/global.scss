@@ -63,9 +63,26 @@ p:last-child {
     height: 300px;
   }
   &.highlight-home {
+    position: relative;
     height: 500px;
-    background: url(/img/home_couv.jpg) no-repeat center center;
-    background-size: cover;
+    // background: url(/img/home_couv.jpg) no-repeat center center;
+    // background-size: cover;
+    .gatsby-image-wrapper {
+      position: absolute !important;
+      top: 0;
+      z-index: 1;
+      height: 100% !important;
+      width: 100% !important;
+      @media (min-width: 880px) {
+        img {
+          object-fit: contain !important;
+        }
+      }
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
   }
   &.highlight-contact {
     background-color: #f6f6f6;
@@ -73,6 +90,10 @@ p:last-child {
   &.highlight-product {
     background-color: #f6f6f6;
   }
+}
+
+.homeImg {
+  border: 1px solid red;
 }
 
 .breadcrumb {
