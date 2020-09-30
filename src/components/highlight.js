@@ -11,8 +11,11 @@ export default function Highlight(props) {
     query {
       homeImg: file(relativePath: { eq: "home_couv.jpg" }) {
         childImageSharp {
-          fixed(height: 500) {
-            ...GatsbyImageSharpFixed_withWebp
+          fixed(
+            height: 500
+            traceSVG: { background: "#fee1de", color: "#888" }
+          ) {
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }

@@ -1,14 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+// import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
 import shopStyles from "./shop.module.scss"
 
 export default function Shop({ data }) {
-  console.log(data.allDataJson.edges)
-  console.log(data.allImages)
-
+  // console.log(data.allImages.edges.node)
   return (
     <Layout>
       <Highlight highlightText="Easy Shop" highlightClass="highlight-shop" />
@@ -25,7 +24,10 @@ export default function Shop({ data }) {
                 <div className="col-6 col-lg-4" key={index}>
                   <div className={shopStyles.productCard}>
                     <div className={shopStyles.visual}>
-                      <Link to={ node.slug }><img src={ node.image } alt="" /></Link>
+                      <Link to={ node.slug }>
+                        <img src={ node.image } alt="" />
+                        {/* <Img fluid={data.allImages.childImageSharp.fluid} /> */}
+                      </Link>
                     </div>
                     <div className={shopStyles.content}>
                       <p>
@@ -57,17 +59,6 @@ export const query = graphql`
           price
           image
           slug
-        }
-      }
-    }
-    allImages: allFile {
-      edges {
-        node {
-          childImageSharp {
-            fluid {
-              originalName
-            }
-          }
         }
       }
     }

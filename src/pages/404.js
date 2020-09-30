@@ -1,15 +1,18 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Container from "../components/container"
 import Img from "gatsby-image"
+import Container from "../components/container"
 
 export default function Image() {
   const data = useStaticQuery(graphql`
     query {
       img404: file(relativePath: { eq: "404.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 730) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            maxWidth: 730
+            traceSVG: { background: "#FFF", color: "#888" }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

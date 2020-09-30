@@ -57,26 +57,37 @@ export default function Home({ data }) {
   )
 }
 
-export const fluidImage = graphql`
-  fragment fluidImage on File {
-    childImageSharp {
-      fluid(maxWidth: 1000) {
-        ...GatsbyImageSharpFluid_withWebp
-      }
-    }
-  }
-`;
-
 export const pageQuery = graphql`
   query {
     imageOne: file(relativePath: { eq: "home_gauche.jpg" }) {
-      ...fluidImage
+      childImageSharp {
+        fluid(
+          maxWidth: 1000
+          traceSVG: { background: "#f6f6f6", color: "#888" }
+        ) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
     imageTwo: file(relativePath: { eq: "home_droit.jpg" }) {
-      ...fluidImage
+      childImageSharp {
+        fluid(
+          maxWidth: 1000
+          traceSVG: { background: "#f6f6f6", color: "#888" }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
     imageThree: file(relativePath: { eq: "apropos_easyconcept.jpg" }) {
-      ...fluidImage
+      childImageSharp {
+        fluid(
+          maxWidth: 1000
+          traceSVG: { background: "#f6f6f6", color: "#888" }
+          ) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
   }
 `;

@@ -16,7 +16,7 @@ export default function Header() {
       file(relativePath: { eq: "baise-en-ville-logo_x2.png" }) {
         childImageSharp {
           fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
