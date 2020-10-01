@@ -1,15 +1,16 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
 import productStyles from "./product.module.scss"
 
 export default function Product({ data }) {
-  const post = data.dataJson
+  const post = data.productCard
   return (
     <Layout>
-      <Highlight highlightText={post.name} highlightClass="highlight-product" />
+      <Highlight highlightText={post.boardName} highlightClass="highlight-product" />
       
       <section>
         <Container>
@@ -33,7 +34,7 @@ export default function Product({ data }) {
         <Container>
           <div className="row">
             <div className="col-12 col-md-8">
-              <img src={post.image} alt="" />
+              <Img fluid={post.image.childImageSharp.fluid} />
             </div>
             <div className="col-12 col-md-4">
               <div className={productStyles.productTitle}>
@@ -64,10 +65,19 @@ export default function Product({ data }) {
 }
 
 export const query = graphql`
-  query($id: String!) {
-    dataJson(id: { eq: $id }) {
-      image
-      name
+  query($slug: String!) {
+    productCard(slug: { eq: $slug }) {
+      image {
+        childImageSharp {
+          fluid(
+            maxWidth: 760
+            traceSVG: { background: "#f6f6f6", color: "#888" }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
+      boardName
       price
       subCategory
       subCategoryDetails

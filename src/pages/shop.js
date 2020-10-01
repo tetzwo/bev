@@ -1,13 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-// import Img from "gatsby-image"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
 import shopStyles from "./shop.module.scss"
 
 export default function Shop({ data }) {
-  // console.log(data.allImages.edges.node)
   return (
     <Layout>
       <Highlight highlightText="Easy Shop" highlightClass="highlight-shop" />
@@ -20,18 +19,17 @@ export default function Shop({ data }) {
             </div>
             <div className="col-12 col-md-9">
               <div className="row">
-              {data.allDataJson.edges.map(({ node }, index) => (
+              {data.allProductCard.edges.map(({ node }, index) => (
                 <div className="col-6 col-lg-4" key={index}>
                   <div className={shopStyles.productCard}>
                     <div className={shopStyles.visual}>
                       <Link to={ node.slug }>
-                        <img src={ node.image } alt="" />
-                        {/* <Img fluid={data.allImages.childImageSharp.fluid} /> */}
+                        <Img fluid={node.image.childImageSharp.fluid} />
                       </Link>
                     </div>
                     <div className={shopStyles.content}>
                       <p>
-                        { node.name }<br />
+                        { node.boardName }<br />
                         { node.subCategoryDetails }
                       </p>
                       <span>{ node.price }</span>
@@ -50,14 +48,22 @@ export default function Shop({ data }) {
 
 export const query = graphql`
   query MyQuery {
-    allDataJson {
+    allProductCard {
       edges {
         node {
-          id
-          name
+          image {
+            childImageSharp {
+              fluid(
+                maxWidth: 280
+                traceSVG: { background: "#f6f6f6", color: "#888" }
+              ) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
+          }
+          boardName
           subCategoryDetails
           price
-          image
           slug
         }
       }

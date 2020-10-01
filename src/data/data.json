@@ -1,167 +1,167 @@
 [
   {
     "id": 1,
-    "name": "go Paris",
+    "boardName": "go Paris",
     "category": "board",
     "subCategory": "cruiser",
     "subCategoryDetails": "planche cruiser",
     "slug": "go-paris-planche-cruiser",
     "price": "89€",
     "details": "Planche cruiser made in France pressée avec 7 plis d’érable dur Nord Américain. Shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale Baise-en-ville Skateboards.",
-    "image": "/img/deck_goparis_00.jpg"
+    "image": "deck_goparis_00.jpg"
   },
   {
     "id": 2,
-    "name": "hipster",
+    "boardName": "hipster",
     "category": "board",
     "subCategory": "cruiser",
     "subCategoryDetails": "planche cruiser",
     "slug": "hipster-planche-cruiser",
     "price": "89€",
     "details": "Planche cruiser made in France pressée avec 7 plis d’érable dur Nord Américain. Shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale Baise-en-ville Skateboards.",
-    "image": "/img/deck_hipster_00.jpg"
+    "image": "deck_hipster_00.jpg"
   },
   {
     "id": 3,
-    "name": "keepcalm",
+    "boardName": "keepcalm",
     "category": "board",
     "subCategory": "cruiser",
     "subCategoryDetails": "planche cruiser",
     "slug": "keepcalm-planche-cruiser",
     "price": "89€",
     "details": "Planche cruiser made in France pressée avec 7 plis d’érable dur Nord Américain. Shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale Baise-en-ville Skateboards.",
-    "image": "/img/deck_keepcalm_00.jpg"
+    "image": "deck_keepcalm_00.jpg"
   },
   {
     "id": 4,
-    "name": "ballerine [sur commande]",
+    "boardName": "ballerine [sur commande]",
     "category": "board",
     "subCategory": "cruiser",
     "subCategoryDetails": "planche cruiser",
     "slug": "ballerine-planche-cruiser",
     "price": "110€",
     "details": "Le prix indiqué est pour la planche seule, possibilité d’ajouter un set classic ou mama. Planche en éditions limitée en collaboration avec Céline Leroy. Planche 7 plis érable Nord-Américain, shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale par Céline Leroy.",
-    "image": "/img/deck_ballerine_00.jpg"
+    "image": "deck_ballerine_00.jpg"
   },
   {
     "id": 5,
-    "name": "coco [plus disponible]",
+    "boardName": "coco [plus disponible]",
     "category": "board",
     "subCategory": "cruiser",
     "subCategoryDetails": "planche cruiser",
     "slug": "coco-planche-cruiser",
     "price": "110€",
     "details": "Le prix indiqué est pour la planche seule, possibilité d’ajouter un set classic ou mama. Planche en éditions limitée en collaboration avec Céline Leroy. Planche 7 plis érable Nord-Américain, shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale par Céline Leroy.",
-    "image": "/img/deck_coco_00.jpg"
+    "image": "deck_coco_00.jpg"
   },
   {
     "id": 6,
-    "name": "love me [plus disponible]",
+    "boardName": "love me [plus disponible]",
     "category": "board",
     "subCategory": "cruiser",
     "subCategoryDetails": "planche cruiser",
     "slug": "love-me-planche-cruiser",
     "price": "110€",
     "details": "Le prix indiqué est pour la planche seule, possibilité d’ajouter un set classic ou mama. Planche en éditions limitée en collaboration avec Emmanuel Hyronimus. Planche 7 plis érable Nord-Américain, shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale par Emmanuel Hyronimus. www.hyronimus.fr",
-    "image": "/img/deck_loveme_00.jpg"
+    "image": "deck_loveme_00.jpg"
   },
   {
     "id": 7,
-    "name": "top to bottom 2017",
+    "boardName": "top to bottom 2017",
     "category": "board",
     "subCategory": "cruiser",
     "subCategoryDetails": "planche cruiser",
     "slug": "top-to-bottom-2017-planche-cruiser",
     "price": "150€",
     "details": "Le prix indiqué est pour la planche seule, possibilité d’ajouter un set classic ou mama. Série produite à la mains, posca et marquage logo à chaud. Dessin libre réalisé par les visiteurs du stand Baise-en-ville Skateboards au festival top to bottom 2017. Planche 7 plis érable Nord-Américain, shape Baise-en-ville 7.7 et trou dans le nose.",
-    "image": "/img/deck_toptobottom_00.jpg"
+    "image": "deck_toptobottom_00.jpg"
   },
   {
     "id": 8,
-    "name": "go Paris",
+    "boardName": "go Paris",
     "category": "mounted",
     "subCategory": "classic",
     "subCategoryDetails": "cruiser set classic",
     "slug": "go-paris-cruiser-set-classic",
     "price": "195€",
     "details": "Avec ses trucks larges et ses roues fines, le set classic offre une maniabilité et une stabilité idéales pour les balades dynamiques. Les roues de 57 mm au profil étroit permettront d’aller chercher quelques tricks avec une adhérence et un confort sur tout type de terrain. Planche 7 plis érable Nord-Américain, shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale Baise-en-ville Skateboards.",
-    "image": "/img/setclassic_goparis_01.jpg"
+    "image": "setclassic_goparis_01.jpg"
   },
   {
     "id": 9,
-    "name": "hipster",
+    "boardName": "hipster",
     "category": "mounted",
     "subCategory": "classic",
     "subCategoryDetails": "cruiser set classic",
     "slug": "hipster-cruiser-set-classic",
     "price": "195€",
     "details": "Avec ses trucks larges et ses roues fines, le set classic offre une maniabilité et une stabilité idéales pour les balades dynamiques. Les roues de 57 mm au profil étroit permettront d’aller chercher quelques tricks avec une adhérence et un confort sur tout type de terrain. Planche 7 plis érable Nord-Américain, shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale Baise-en-ville Skateboards.",
-    "image": "/img/setclassic_hipster_01.jpg"
+    "image": "setclassic_hipster_01.jpg"
   },
   {
     "id": 10,
-    "name": "go Paris",
+    "boardName": "go Paris",
     "category": "mounted",
     "subCategory": "mama",
     "subCategoryDetails": "cruiser set mama",
     "slug": "go-paris-cruiser-set-mama",
     "price": "195€",
     "details": "Avec ses trucks étroits et gommes soft, le set mama offre un tournant court et fun ! Idéal pour les balades à la cool. Les roues de 60 mm au profil vintage sont rassurantes sur tout type de terrain. Planche 7 plis érable Américain, shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale Baise-en-ville Skateboards.",
-    "image": "/img/setmama_goparis_01.jpg"
+    "image": "setmama_goparis_01.jpg"
   },
   {
     "id": 11,
-    "name": "hipster",
+    "boardName": "hipster",
     "category": "mounted",
     "subCategory": "mama",
     "subCategoryDetails": "cruiser set mama",
     "slug": "hipster-cruiser-set-mama",
     "price": "195€",
     "details": "Avec ses trucks étroits et gommes soft, le set mama offre un tournant court et fun ! Idéal pour les balades à la cool. Les roues de 60 mm au profil vintage sont rassurantes sur tout type de terrain. Planche 7 plis érable Américain, shape Baise-en-ville 7.7 et trou dans le nose. Illustration originale Baise-en-ville Skateboards.",
-    "image": "/img/setmama_hipster_01.jpg"
+    "image": "setmama_hipster_01.jpg"
   },
   {
     "id": 12,
-    "name": "allumette",
+    "boardName": "allumette",
     "category": "mounted",
     "subCategory": "mama",
     "subCategoryDetails": "vintage cruiser",
     "slug": "allumette-vintage-cruiser",
     "price": "150€",
     "details": "Planche cruiser vintage de 1978, revisitée par Baise-en-ville Skateboards en 2018. Série produite à la mains, peinture et marquage logo à chaud, Lucid Grip soft. Avec ses trucks étroits et gommes soft, le set old mama offre un tournant court et fun ! Idéal pour les balades à la cool. Les roues de 60 mm au profil vintage sont rassurantes sur tout type de terrain.",
-    "image": "/img/vintage_allumette_00.jpg"
+    "image": "vintage_allumette_00.jpg"
   },
   {
     "id": 13,
-    "name": "ein nachbar #1",
+    "boardName": "ein nachbar #1",
     "category": "mounted",
     "subCategory": "mama",
     "subCategoryDetails": "vintage cruiser",
     "slug": "ein-nachbar-1-vintage-cruiser",
     "price": "170€",
     "details": "Planche cruiser vintage de 1978, revisitée par Baise-en-ville Skateboards en 2018. Série produite à la mains, posca et marquage logo à chaud, Lucid Grip soft. Avec ses trucks étroits et gommes soft, le set old mama offre un tournant court et fun ! Idéal pour les balades à la cool. Les roues de 60 mm au profil vintage sont rassurantes sur tout type de terrain.",
-    "image": "/img/vintage_nachbarshaft1_00.jpg"
+    "image": "vintage_nachbarshaft1_00.jpg"
   },
   {
     "id": 14,
-    "name": "ein nachbar #2",
+    "boardName": "ein nachbar #2",
     "category": "mounted",
     "subCategory": "mama",
     "subCategoryDetails": "vintage cruiser",
     "slug": "ein-nachbar-2-vintage-cruiser",
     "price": "170€",
     "details": "Planche cruiser vintage de 1978, revisitée par Baise-en-ville Skateboards en 2018. Série produite à la mains, posca et marquage logo à chaud, Lucid Grip soft. Avec ses trucks étroits et gommes soft, le set old mama offre un tournant court et fun ! Idéal pour les balades à la cool. Les roues de 60 mm au profil vintage sont rassurantes sur tout type de terrain.",
-    "image": "/img/vintage_nachbarshaft2_00.jpg"
+    "image": "vintage_nachbarshaft2_00.jpg"
   },
   {
     "id": 15,
-    "name": "ein nachbar #3",
+    "boardName": "ein nachbar #3",
     "category": "mounted",
     "subCategory": "mama",
     "subCategoryDetails": "vintage cruiser",
     "slug": "ein-nachbar-3-vintage-cruiser",
     "price": "170€",
     "details": "Planche cruiser vintage de 1978, revisitée par Baise-en-ville Skateboards en 2018. Série produite à la mains, posca et marquage logo à chaud, Lucid Grip soft. Avec ses trucks étroits et gommes soft, le set old mama offre un tournant court et fun ! Idéal pour les balades à la cool. Les roues de 60 mm au profil vintage sont rassurantes sur tout type de terrain.",
-    "image": "/img/vintage_nachbarshaft3_00.jpg"
+    "image": "vintage_nachbarshaft3_00.jpg"
   }
 ]

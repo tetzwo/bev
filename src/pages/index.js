@@ -62,7 +62,7 @@ export const pageQuery = graphql`
     imageOne: file(relativePath: { eq: "home_gauche.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1000
+          maxWidth: 540
           traceSVG: { background: "#f6f6f6", color: "#888" }
         ) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -72,7 +72,7 @@ export const pageQuery = graphql`
     imageTwo: file(relativePath: { eq: "home_droit.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1000
+          maxWidth: 540
           traceSVG: { background: "#f6f6f6", color: "#888" }
           ) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -82,7 +82,7 @@ export const pageQuery = graphql`
     imageThree: file(relativePath: { eq: "apropos_easyconcept.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1000
+          maxWidth: 1110
           traceSVG: { background: "#f6f6f6", color: "#888" }
           ) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
