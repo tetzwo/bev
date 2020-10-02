@@ -24,7 +24,7 @@ export default function Highlight(props) {
   if (fromHome) {
     return (
       <section className={`highlight ${ props.highlightClass }`}>
-        <Img fixed={data.homeImg.childImageSharp.fixed} />
+        <Img fixed={data.homeImg.childImageSharp.fixed} alt="lorem" />
         <Container>
           <h1 className={highlightStyles.title}>{props.highlightText}</h1>
         </Container>
@@ -35,6 +35,7 @@ export default function Highlight(props) {
     <section className={`highlight ${ props.highlightClass }`}>
       <Container>
         <h1 className={highlightStyles.title}>{props.highlightText}</h1>
+        <p className={highlightStyles.subTitle}>{props.highlightSubText}</p>
       </Container>
     </section>
   )

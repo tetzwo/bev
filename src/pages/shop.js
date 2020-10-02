@@ -1,21 +1,39 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
 import shopStyles from "./shop.module.scss"
 
 export default function Shop({ data }) {
+  const listItems = data.allFilters.distinct.map((filter) =>
+    <li key={filter}>
+      <button>{filter}</button>
+    </li>
+  );
+
   return (
     <Layout>
-      <Highlight highlightText="Easy Shop" highlightClass="highlight-shop" />
+      <SEO
+        title="easy shop"
+        description="Achetez un cruiser skate en bois fabriqué artisanalement en France. Nos skates complets sont montés avec des trucks et roues de marque allemande, assurant qualité, confort et durabilité."
+      />
       
+      <Highlight
+        highlightClass="highlight-shop"
+        highlightText="Easy Shop"
+        highlightSubText="lorem"
+      />
+
       <section className={shopStyles.section}>
         <Container>
           <div className="row">
             <div className="col-12 col-md-3">
-              Filters
+              <ul className={shopStyles.filtersList}>
+                {listItems}
+              </ul>
             </div>
             <div className="col-12 col-md-9">
               <div className="row">
@@ -48,6 +66,9 @@ export default function Shop({ data }) {
 
 export const query = graphql`
   query MyQuery {
+    allFilters: allProductCard {
+      distinct(field: subCategoryDetails)
+    }
     allProductCard {
       edges {
         node {

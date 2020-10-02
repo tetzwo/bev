@@ -10,21 +10,21 @@ export default function Footer() {
       footerOne: file(relativePath: { eq: "ico-easy-contact.png" }) {
         childImageSharp {
           fixed(height: 40) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
       footerTwo: file(relativePath: { eq: "ico-easy-payment.png" }) {
         childImageSharp {
           fixed(height: 40) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
       footerThree: file(relativePath: { eq: "ico-easy-deliver.png" }) {
         childImageSharp {
           fixed(height: 40) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
@@ -39,7 +39,6 @@ export default function Footer() {
             <div className="col-12 col-md-4">
               <div className={footerStyles.reinsuranceCard}>
                 <div className={footerStyles.visual}>
-                  {/* <img src="/img/ico-easy-contact.png" alt="" /> */}
                   <Img fixed={data.footerOne.childImageSharp.fixed} alt="" />
                 </div>
                 <p>
@@ -50,7 +49,6 @@ export default function Footer() {
             <div className="col-12 col-md-4">
               <div className={footerStyles.reinsuranceCard}>
                 <div className={footerStyles.visual}>
-                  {/* <img src="/img/ico-easy-payment.png" alt="" /> */}
                   <Img fixed={data.footerTwo.childImageSharp.fixed} alt="" />
                 </div>
                 <p>
@@ -61,7 +59,6 @@ export default function Footer() {
             <div className="col-12 col-md-4">
               <div className={footerStyles.reinsuranceCard}>
                 <div className={footerStyles.visual}>
-                  {/* <img src="/img/ico-easy-deliver.png" alt="" /> */}
                   <Img fixed={data.footerThree.childImageSharp.fixed} alt="" />
                 </div>
                 <p>

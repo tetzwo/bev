@@ -1,3 +1,16 @@
+.filtersList {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+  button{
+    padding: 0;
+    text-align: left;
+    line-height: 32px;
+    border: 0;
+    background: transparent;
+    outline: none;
+  }
+}
 .productCard {
   margin-bottom: 30px;
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import ContainerFluid from "../components/container-fluid"
@@ -10,16 +11,17 @@ import indexStyles from "./index.module.scss"
 export default function Home({ data }) {
   return (
     <Layout>
+      <SEO title="accueil" />
       <Highlight highlightText="baise-en-ville skateboards" highlightClass="highlight-home" highlightImg="home_couv.jpg" />
 
       <section className={indexStyles.section}>
         <Container>
           <div className="row">
             <div className="col-6 col-md-6">
-              <Img fluid={data.imageOne.childImageSharp.fluid} />
+              <Img fluid={data.imageOne.childImageSharp.fluid} alt="lorem" />
             </div>
             <div className="col-6 col-md-6">
-              <Img fluid={data.imageTwo.childImageSharp.fluid} />
+              <Img fluid={data.imageTwo.childImageSharp.fluid} alt="lorem" />
             </div>
           </div>
         </Container>
@@ -50,7 +52,7 @@ export default function Home({ data }) {
         </Container>
 
         <ContainerFluid>
-          <Img fluid={data.imageThree.childImageSharp.fluid} className="center mw1110" />
+          <Img fluid={data.imageThree.childImageSharp.fluid} className="center mw1110" alt="lorem" />
         </ContainerFluid>
       </section>
     </Layout>

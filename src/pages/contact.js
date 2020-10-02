@@ -1,4 +1,5 @@
 import React from "react"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
@@ -6,6 +7,7 @@ import Highlight from "../components/highlight"
 export default function Contact() {
   return (
     <Layout>
+      <SEO title="contactez-nous" />
       <Highlight highlightText="Contact" highlightClass="highlight-contact" />
 
       <section>

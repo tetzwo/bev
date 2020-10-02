@@ -31,6 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
+// https://freddydumont.com/blog/how-to-source-images-and-data-from-json-files-in-gatsby
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   products.forEach((card) => {
     // 1. Extract the card data.

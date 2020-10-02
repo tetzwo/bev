@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
@@ -10,7 +11,16 @@ export default function Product({ data }) {
   const post = data.productCard
   return (
     <Layout>
-      <Highlight highlightText={post.boardName} highlightClass="highlight-product" />
+      <SEO
+        title={post.boardName}
+        description="Achetez un cruiser skate en bois fabriqué artisanalement en France. Nos skates complets sont montés avec des trucks et roues de marque allemande, assurant qualité, confort et durabilité."
+      />
+
+      <Highlight
+        highlightClass="highlight-product"
+        highlightText={post.boardName}
+        highlightSubText={post.subCategoryDetails}
+      />
       
       <section>
         <Container>
@@ -34,11 +44,11 @@ export default function Product({ data }) {
         <Container>
           <div className="row">
             <div className="col-12 col-md-8">
-              <Img fluid={post.image.childImageSharp.fluid} />
+              <Img fluid={post.image.childImageSharp.fluid} className="productVisual" alt={post.boardName} />
             </div>
             <div className="col-12 col-md-4">
               <div className={productStyles.productTitle}>
-                {post.name}<br />
+                {post.boardName}<br />
                 {post.subCategoryDetails}
               </div>
               <span className={productStyles.productPrice}>{post.price}</span>

@@ -4,23 +4,17 @@ import Img from "gatsby-image"
 import Container from "./container"
 import headerStyles from "./header.module.scss"
 
-const ListLink = props => (
-  <li>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
-
 export default function Header() {
   const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "baise-en-ville-logo_x2.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
+  query {
+    file(relativePath: { eq: "baise-en-ville-logo_x2.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
+  }
   `)
   return (
     <header className={headerStyles.header}>
@@ -31,9 +25,9 @@ export default function Header() {
           </Link>
 
           <ul className={headerStyles.nav}>
-            <ListLink to="/">Home</ListLink>
-            <ListLink to="/shop/">Shop</ListLink>
-            <ListLink to="/contact/">Contact</ListLink>
+            <li><Link to="/">Accueil</Link></li>
+            <li><Link to="/shop/" activeStyle={{ color: "#fec2c2" }} partiallyActive={true}>Shop</Link></li>
+            <li><Link to="/contact/">Contact</Link></li>
           </ul>
         </div>
       </Container>

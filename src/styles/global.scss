@@ -55,18 +55,18 @@ p:last-child {
 .highlight {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   height: 160px;
   width: 100%;
-  background-color: #fee1de;
+  background-color: #f6f6f6;
   @media (min-width: 768px) {
+    margin-bottom: 40px;
     height: 300px;
   }
   &.highlight-home {
     position: relative;
     height: 500px;
-    // background: url(/img/home_couv.jpg) no-repeat center center;
-    // background-size: cover;
+    background-color: #fee1de;
     .gatsby-image-wrapper {
       position: absolute !important;
       top: 0;
@@ -84,12 +84,6 @@ p:last-child {
       z-index: 2;
     }
   }
-  &.highlight-contact {
-    background-color: #f6f6f6;
-  }
-  &.highlight-product {
-    background-color: #f6f6f6;
-  }
 }
 
 .homeImg {
@@ -100,7 +94,7 @@ p:last-child {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
   padding: 0;
   &-item {
     padding-right: 4px;
@@ -113,5 +107,12 @@ p:last-child {
     a {
       color: #777;
     }
+  }
+}
+
+.productVisual {
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
   }
 }
