@@ -1,10 +1,10 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
+import Card from "../components/card"
 import shopStyles from "./shop.module.scss"
 
 export default function Shop({ data }) {
@@ -39,20 +39,13 @@ export default function Shop({ data }) {
               <div className="row">
               {data.allProductCard.edges.map(({ node }, index) => (
                 <div className="col-6 col-lg-4" key={index}>
-                  <div className={shopStyles.productCard}>
-                    <div className={shopStyles.visual}>
-                      <Link to={ node.slug }>
-                        <Img fluid={node.image.childImageSharp.fluid} />
-                      </Link>
-                    </div>
-                    <div className={shopStyles.content}>
-                      <p>
-                        { node.boardName }<br />
-                        { node.subCategoryDetails }
-                      </p>
-                      <span>{ node.price }</span>
-                    </div>
-                  </div>
+                  <Card
+                    slug={ node.slug }
+                    image={ node.image.childImageSharp.fluid }
+                    boardName={ node.boardName }
+                    price={ node.price }
+                    subCategoryDetails={ node.subCategoryDetails }
+                  />
                 </div>
               ))}
               </div>

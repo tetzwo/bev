@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
+import Card from "../components/card"
 import productStyles from "./product.module.scss"
 
 export default function Product({ data }) {
@@ -68,6 +69,21 @@ export default function Product({ data }) {
               </div>
             </div>
           </div>
+
+          <h2>et aussi...</h2>  
+          <div className="row">
+            {data.allProductCard.edges.map(({ node }, index) => (
+              <div className="col-6 col-md-3" key={index}>
+                <Card
+                  slug={ node.slug }
+                  image={ node.image.childImageSharp.fluid }
+                  boardName={ node.boardName }
+                  price={ node.price }
+                  subCategoryDetails={ node.subCategoryDetails }
+                />
+              </div>
+            ))}
+            </div>
         </Container>
       </section>
     </Layout>
@@ -92,6 +108,27 @@ export const query = graphql`
       subCategory
       subCategoryDetails
       details
+    }
+    
+    allProductCard(limit: 4) {
+      edges {
+        node {
+          image {
+            childImageSharp {
+              fluid(
+                maxWidth: 760
+                traceSVG: { background: "#f6f6f6", color: "#888" }
+              ) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+            }
+          }
+          boardName
+          price
+          subCategoryDetails
+          slug
+        }
+      }
     }
   }
 `
