@@ -25,9 +25,10 @@ export default function Header() {
           </Link>
 
           <ul className={headerStyles.nav}>
-            <li><Link to="/">Accueil</Link></li>
-            <li><Link to="/shop/" activeStyle={{ color: "#fec2c2" }} partiallyActive={true}>Shop</Link></li>
-            <li><Link to="/contact/">Contact</Link></li>
+            <li><Link to="/">accueil</Link></li>
+            <li><Link to="/shop/" activeStyle={{ color: "#fec2c2" }} partiallyActive={true}>shop</Link></li>
+            <li><Link to="/a-propos/">à propos</Link></li>
+            <li><Link to="/contact/">contact</Link></li>
           </ul>
         </div>
       </Container>

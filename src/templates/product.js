@@ -60,7 +60,7 @@ export default function Product({ data }) {
                 <p>
                   Le paiement en ligne arrive bientôt ! En attendant pour commander cette planche, veuillez nous contacter par email !
                 </p>
-                <Link to="/contact/">nous contacter</Link>
+                <Link to="/contact/" className="btn">nous contacter</Link>
               </div>
               <div className={productStyles.productDetails}>
                 <p>
