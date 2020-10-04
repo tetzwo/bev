@@ -24,7 +24,6 @@ export default function Shop({ data }) {
       <Highlight
         highlightClass="highlight-shop"
         highlightText="Easy Shop"
-        highlightSubText="lorem"
       />
 
       <section className={shopStyles.section}>
