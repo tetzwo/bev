@@ -20,7 +20,7 @@ export default function Product({ data }) {
       <Highlight
         highlightClass="highlight-product"
         highlightText={post.boardName}
-        highlightSubText={post.subCategoryDetails}
+        highlightSubText={post.subCategory}
       />
       
       <section>
@@ -34,7 +34,7 @@ export default function Product({ data }) {
                 <Link to="/shop/">shop</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
-                {post.name} {post.subCategoryDetails}
+                {post.name} {post.subCategory}
               </li>
             </ol>
           </nav>
@@ -50,7 +50,7 @@ export default function Product({ data }) {
             <div className="col-12 col-md-4">
               <div className={productStyles.productTitle}>
                 {post.boardName}<br />
-                {post.subCategoryDetails}
+                {post.subCategory}
               </div>
               <span className={productStyles.productPrice}>{post.price}</span>
               <p className={productStyles.productShipping}>
@@ -79,7 +79,7 @@ export default function Product({ data }) {
                   image={ node.image.childImageSharp.fluid }
                   boardName={ node.boardName }
                   price={ node.price }
-                  subCategoryDetails={ node.subCategoryDetails }
+                  subCategory={ node.subCategory }
                 />
               </div>
             ))}
@@ -106,7 +106,7 @@ export const query = graphql`
       boardName
       price
       subCategory
-      subCategoryDetails
+      subCategory
       details
     }
     
@@ -125,7 +125,7 @@ export const query = graphql`
           }
           boardName
           price
-          subCategoryDetails
+          subCategory
           slug
         }
       }

@@ -14,7 +14,7 @@ export default function Card(props) {
       <div className={cardStyles.content}>
         <p>
           { props.boardName }<br />
-          { props.subCategoryDetails }
+          { props.subCategory }
         </p>
         <span>{ props.price }</span>
       </div>

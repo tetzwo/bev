@@ -44,7 +44,7 @@ export default function Shop({ data }) {
                     image={ node.image.childImageSharp.fluid }
                     boardName={ node.boardName }
                     price={ node.price }
-                    subCategoryDetails={ node.subCategoryDetails }
+                    subCategory={ node.subCategory }
                   />
                 </div>
               ))}
@@ -60,7 +60,7 @@ export default function Shop({ data }) {
 export const query = graphql`
   query MyQuery {
     allFilters: allProductCard {
-      distinct(field: subCategoryDetails)
+      distinct(field: subCategory)
     }
     allProductCard {
       edges {
@@ -76,7 +76,7 @@ export const query = graphql`
             }
           }
           boardName
-          subCategoryDetails
+          subCategory
           price
           slug
         }

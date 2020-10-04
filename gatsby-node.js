@@ -9,7 +9,6 @@ exports.createPages = async ({ graphql, actions }) => {
       allDataJson {
         edges {
           node {
-            id
             slug
           }
         }
@@ -22,10 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: 'shop/' + node.slug,
       component: path.resolve(`./src/templates/product.js`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.slug,
-        id: node.id
       },
     })
   })
@@ -34,17 +30,16 @@ exports.createPages = async ({ graphql, actions }) => {
 // https://freddydumont.com/blog/how-to-source-images-and-data-from-json-files-in-gatsby
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   products.forEach((card) => {
-    // 1. Extract the card data.
+    // 1. Extract the card data from the original json
     const {
       id,
       boardName,
-      image,
       category,
       subCategory,
-      subCategoryDetails,
       slug,
       price,
-      details
+      details,
+      image
     } = card;
 
 
@@ -85,7 +80,6 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       boardName,
       category,
       subCategory,
-      subCategoryDetails,
       slug,
       price,
       details,
