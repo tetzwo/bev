@@ -7,16 +7,17 @@ export default function Card(props) {
   return (
     <div className={cardStyles.productCard}>
       <div className={cardStyles.visual}>
-        <Link to={ props.slug }>
+        <Link to={ props.url }>
           <Img fluid={ props.image } alt={ props.boardName } />
         </Link>
       </div>
       <div className={cardStyles.content}>
-        <p>
-          { props.boardName }<br />
-          { props.subCategory }
-        </p>
+        <span>{ props.boardName }</span>
         <span>{ props.price }</span>
+      </div>
+      <div>
+        {/* props.availability */}
+        { props.subCategory }
       </div>
     </div>
   )

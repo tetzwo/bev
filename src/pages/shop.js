@@ -40,9 +40,10 @@ export default function Shop({ data }) {
               {data.allProductCard.edges.map(({ node }, index) => (
                 <div className="col-6 col-lg-4" key={index}>
                   <Card
-                    slug={ node.slug }
+                    url={ node.url }
                     image={ node.image.childImageSharp.fluid }
                     boardName={ node.boardName }
+                    availability={ node.availability }
                     price={ node.price }
                     subCategory={ node.subCategory }
                   />
@@ -77,8 +78,9 @@ export const query = graphql`
           }
           boardName
           subCategory
+          availability
           price
-          slug
+          url
         }
       }
     }

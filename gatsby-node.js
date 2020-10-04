@@ -2,31 +2,6 @@ const path = require(`path`)
 const products = require('./src/data/data.json');
 const IMAGE_PATH = './src/images/';
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const result = await graphql(`
-    query {
-      allDataJson {
-        edges {
-          node {
-            slug
-          }
-        }
-      }
-    }  
-  `)
-  
-  result.data.allDataJson.edges.forEach(({ node }) => {
-    createPage({
-      path: 'shop/' + node.slug,
-      component: path.resolve(`./src/templates/product.js`),
-      context: {
-        slug: node.slug,
-      },
-    })
-  })
-}
-
 // https://freddydumont.com/blog/how-to-source-images-and-data-from-json-files-in-gatsby
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   products.forEach((card) => {
@@ -36,12 +11,11 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       boardName,
       category,
       subCategory,
-      slug,
+      availability,
       price,
       details,
       image
     } = card;
-
 
     // 1. name, extension and absolute path are required to build a File node
     const { name, ext } = path.parse(image);
@@ -69,18 +43,14 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     //    Sharp adds childImageSharp to the node
     actions.createNode(imageNode);
 
-
-
-
-    
-    // 2. Build the PortfolioCard node. Note that most fields simply correspond to
+    // 2. Build the ProductCard node. Note that most fields simply correspond to
     //    to our JSON data.
     const node = {
-      id: createNodeId(`card-${slug}`),
+      id: createNodeId(`card-${id}`),
       boardName,
       category,
       subCategory,
-      slug,
+      availability,
       price,
       details,
       image: imageNode,
@@ -88,19 +58,37 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
         type: 'ProductCard',
         contentDigest: createContentDigest(card),
       },
+      slug: boardName.replace(/\s+/g, '-').toLowerCase(),
+      subCategorySlug: subCategory.replace(/\s+/g, '-').toLowerCase(),
+      url: (subCategory +'/'+ boardName).replace(/\s+/g, '-').replace('#', '').toLowerCase(),
     };
     
     // 3. Create the node
     actions.createNode(node);
-    
-
-
-
-    
-
-    
-
-
-
   });
 };
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query {
+      allProductCard {
+        edges {
+          node {
+            url
+          }
+        }
+      }
+    }  
+  `)
+  
+  result.data.allProductCard.edges.forEach(({ node }) => {
+    createPage({
+      path: 'shop/' + node.url,
+      component: path.resolve(`./src/templates/product.js`),
+      context: {
+        url: node.url
+      },
+    })
+  })
+}

@@ -34,7 +34,7 @@ export default function Product({ data }) {
                 <Link to="/shop/">shop</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
-                {post.name} {post.subCategory}
+                {post.boardName} {post.subCategory}
               </li>
             </ol>
           </nav>
@@ -50,6 +50,7 @@ export default function Product({ data }) {
             <div className="col-12 col-md-4">
               <div className={productStyles.productTitle}>
                 {post.boardName}<br />
+                {/* post.availability */}
                 {post.subCategory}
               </div>
               <span className={productStyles.productPrice}>{post.price}</span>
@@ -75,9 +76,10 @@ export default function Product({ data }) {
             {data.allProductCard.edges.map(({ node }, index) => (
               <div className="col-6 col-md-3" key={index}>
                 <Card
-                  slug={ node.slug }
+                  url={'../../'+ node.url }
                   image={ node.image.childImageSharp.fluid }
                   boardName={ node.boardName }
+                  availability={ node.availability }
                   price={ node.price }
                   subCategory={ node.subCategory }
                 />
@@ -91,8 +93,8 @@ export default function Product({ data }) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    productCard(slug: { eq: $slug }) {
+  query($url: String!) {
+    productCard(url: { eq: $url }) {
       image {
         childImageSharp {
           fluid(
@@ -106,8 +108,9 @@ export const query = graphql`
       boardName
       price
       subCategory
-      subCategory
+      availability
       details
+      url
     }
     
     allProductCard(limit: 4) {
@@ -126,6 +129,8 @@ export const query = graphql`
           boardName
           price
           subCategory
+          availability
+          url
           slug
         }
       }
