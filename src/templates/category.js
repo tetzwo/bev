@@ -5,12 +5,12 @@ import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
 import Card from "../components/card"
-import shopStyles from "./shop.module.scss"
+import categoryStyles from "./category.module.scss"
 
-export default function Shop({ data }) {
+export default function Category({ data }) {
   const listItems = data.allFilters.distinct.map((filter) =>
     <li key={filter}>
-      <Link to={ filter.replace(/\s+/g, '-').toLowerCase() }>{filter}</Link>
+      <Link to={ '../'+ filter.replace(/\s+/g, '-').toLowerCase() }>{filter}</Link>
     </li>
   );
 
@@ -24,9 +24,10 @@ export default function Shop({ data }) {
       <Highlight
         highlightClass="highlight-shop"
         highlightText="Easy Shop"
+        highlightSubText="lorem"
       />
 
-      <section className={shopStyles.section}>
+      <section className={categoryStyles.section}>
         <Container>
           <div className="row">
             <div className="col-12 col-md-3">
@@ -36,10 +37,10 @@ export default function Shop({ data }) {
             </div>
             <div className="col-12 col-md-9">
               <div className="row">
-              {data.allProductCard.edges.map(({ node }, index) => (
+              {data.category.edges.map(({ node }, index) => (
                 <div className="col-6 col-lg-4" key={index}>
                   <Card
-                    url={ node.url }
+                    url={ '../' + node.url }
                     image={ node.image.childImageSharp.fluid }
                     boardName={ node.boardName }
                     availability={ node.availability }
@@ -58,11 +59,11 @@ export default function Shop({ data }) {
 }
 
 export const query = graphql`
-  query MyQuery {
+  query($subCategorySlug: String!) {
     allFilters: allProductCard {
       distinct(field: subCategory)
     }
-    allProductCard {
+    category: allProductCard(filter: {subCategorySlug: {eq: $subCategorySlug}}) {
       edges {
         node {
           image {

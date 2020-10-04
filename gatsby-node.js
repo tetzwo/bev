@@ -76,6 +76,7 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             url
+            subCategorySlug
           }
         }
       }
@@ -88,6 +89,13 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/templates/product.js`),
       context: {
         url: node.url
+      },
+    })
+    createPage({
+      path: 'shop/' + node.subCategorySlug,
+      component: path.resolve(`./src/templates/category.js`),
+      context: {
+        subCategorySlug: node.subCategorySlug
       },
     })
   })

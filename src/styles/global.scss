@@ -131,6 +131,22 @@ p:last-child {
   }
 }
 
+.filtersList {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style: none;
+  a {
+    text-decoration: none;
+    color: #777;
+    &[aria-current] {
+      color: #fec2c2;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 .productVisual {
   margin-bottom: 20px;
   @media (min-width: 768px) {
