@@ -3,6 +3,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
+import Breadcrumb from "../components/breadcrumb"
 
 export default function Contact() {
   return (
@@ -12,6 +13,8 @@ export default function Contact() {
 
       <section>
         <Container>
+          <Breadcrumb current="contactez-nous" />
+          
           <div className="row">
             <div className="col-12 col-md-8 colContent">
               <h2>par email</h2>

@@ -1,0 +1,19 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  &Item {
+    padding-right: 4px;
+    &[aria-current]::after {
+      display: none;
+    }
+    &::after {
+      content: " /";
+    }
+    a {
+      color: #777;
+    }
+  }
+}

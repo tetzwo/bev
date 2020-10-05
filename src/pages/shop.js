@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
 import Card from "../components/card"
+import Breadcrumb from "../components/breadcrumb"
 import shopStyles from "./shop.module.scss"
 
 export default function Shop({ data }) {
@@ -28,6 +29,8 @@ export default function Shop({ data }) {
 
       <section className={shopStyles.section}>
         <Container>
+          <Breadcrumb current="shop" />
+
           <div className="row">
             <div className="col-12 col-md-3">
               <ul className="filtersList">
@@ -62,6 +65,7 @@ export const query = graphql`
     allFilters: allProductCard {
       distinct(field: subCategory)
     }
+    
     allProductCard {
       edges {
         node {

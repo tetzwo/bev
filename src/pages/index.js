@@ -29,7 +29,7 @@ export default function Home({ data }) {
       
       {/* <video class="video" width="1200" preload="auto" autoplay="" loop="" muted="muted">
         <source src="http://www.baise-en-ville-skateboards.com/wp-content/uploads/2016/06/baise-en-ville-home.webm" type="video/webm">
-        <source src="http://www.baise-en-ville-skateboards.com/wp-content/uploads/2016/06/baise-en-ville-home.mp4" type="video/mp4">
+        <source src="/static/baise-en-ville-home.mp4" type="video/mp4">
         <source src="http://www.baise-en-ville-skateboards.com/wp-content/uploads/2016/06/baise-en-ville-home.ogv" type="video/ogg">
       </video> */}
 

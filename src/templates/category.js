@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
 import Card from "../components/card"
+import Breadcrumb from "../components/breadcrumb"
 import categoryStyles from "./category.module.scss"
 
 export default function Category({ data }) {
@@ -24,11 +25,16 @@ export default function Category({ data }) {
       <Highlight
         highlightClass="highlight-shop"
         highlightText="Easy Shop"
-        highlightSubText="lorem"
+        highlightSubText={data.categoryFiltered.subCategory}
       />
 
       <section className={categoryStyles.section}>
         <Container>
+          <Breadcrumb
+            fromCategory="true"
+            current={data.categoryFiltered.subCategory}
+          />
+
           <div className="row">
             <div className="col-12 col-md-3">
               <ul className="filtersList">
@@ -60,9 +66,14 @@ export default function Category({ data }) {
 
 export const query = graphql`
   query($subCategorySlug: String!) {
+    categoryFiltered: productCard(subCategorySlug: { eq: $subCategorySlug }) {
+      subCategory
+    }
+
     allFilters: allProductCard {
       distinct(field: subCategory)
     }
+    
     category: allProductCard(filter: {subCategorySlug: {eq: $subCategorySlug}}) {
       edges {
         node {

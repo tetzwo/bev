@@ -6,18 +6,16 @@ import cardStyles from "./card.module.scss"
 export default function Card(props) {
   return (
     <div className={cardStyles.productCard}>
-      <div className={cardStyles.visual}>
-        <Link to={ props.url }>
-          <Img fluid={ props.image } alt={ props.boardName } />
-        </Link>
-      </div>
+      <Link to={ props.url } className={cardStyles.visual}>
+        <Img fluid={ props.image } alt={ props.boardName } />
+      </Link>
       <div className={cardStyles.content}>
         <span>{ props.boardName }</span>
         <span>{ props.price }</span>
       </div>
-      <div>
-        {/* props.availability */}
-        { props.subCategory }
+      <div className={cardStyles.details}>
+        { props.availability }
+        <span>{ props.subCategory }</span>
       </div>
     </div>
   )

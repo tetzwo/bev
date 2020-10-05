@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Container from "../components/container"
 import ContainerFluid from "../components/container-fluid"
 import Highlight from "../components/highlight"
+import Breadcrumb from "../components/breadcrumb"
+import Video from "../components/video"
 
 export default function Apropos({ data }) {
   return (
@@ -15,6 +17,13 @@ export default function Apropos({ data }) {
 
       <section>
         <Container>
+          <Breadcrumb current="à propos" />
+
+          <Video
+            videoSrcURL="https://www.youtube.com/watch?v=w89nQzJeBV0&t=1s&ab_channel=BeBetterParis"
+            videoTitle="Baise-en-Ville Breaksdown the Skateboard (subtitles in english)"
+          />
+          
           <div className="row rowAlignCenter">
             <div className="col-12 col-md-6 colContent">
               <h2>à propos</h2>

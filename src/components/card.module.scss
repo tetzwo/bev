@@ -1,15 +1,19 @@
 .productCard {
   margin-bottom: 30px;
 }
+.visual {
+  display: block;
+  margin-bottom: 10px;
+}
 .content {
   display: flex;
   justify-content: space-between;
   vertical-align: top;
   p {
     margin: 0;
-    padding-right: 20px;
+    padding-right: 5px;
   }
 }
-.visual {
-  margin-bottom: 10px;
+.details span {
+  display: block;
 }

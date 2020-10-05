@@ -42,7 +42,7 @@ export default function Footer() {
                   <Img fixed={data.footerOne.childImageSharp.fixed} alt="" />
                 </div>
                 <p>
-                  Contactez-nous par mail, par téléphone, nous sommes là pour vous !
+                  Contactez-nous par mail, par téléphone, nous sommes là pour vous&nbsp;!
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function Footer() {
                   <Img fixed={data.footerThree.childImageSharp.fixed} alt="" />
                 </div>
                 <p>
-                  Livraison internationale, Europe, France ou remise en main propre à Paris !
+                  Livraison internationale, Europe, France ou remise en main propre à Paris&nbsp;!
                 </p>
               </div>
             </div>

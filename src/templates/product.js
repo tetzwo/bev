@@ -6,10 +6,12 @@ import Layout from "../components/layout"
 import Container from "../components/container"
 import Highlight from "../components/highlight"
 import Card from "../components/card"
+import Breadcrumb from "../components/breadcrumb"
 import productStyles from "./product.module.scss"
 
 export default function Product({ data }) {
   const post = data.productCard
+
   return (
     <Layout>
       <SEO
@@ -22,36 +24,25 @@ export default function Product({ data }) {
         highlightText={post.boardName}
         highlightSubText={post.subCategory}
       />
-      
-      <section>
-        <Container>
-          <nav aria-label="breadcrumb">
-            <ol className="breadcrumb">
-              <li className="breadcrumb-item">
-                <Link to="/">baise-en-ville skateboards</Link>
-              </li>
-              <li className="breadcrumb-item">
-                <Link to="/shop/">shop</Link>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-                {post.boardName} {post.subCategory}
-              </li>
-            </ol>
-          </nav>
-        </Container>
-      </section>
-      
+     
       <section className={productStyles.section}>
         <Container>
+          <Breadcrumb
+            fromProduct="true"
+            category={post.subCategory}
+            categorySlug={post.subCategorySlug}
+            current={post.boardName}
+          />
+
           <div className="row">
             <div className="col-12 col-md-8">
               <Img fluid={post.image.childImageSharp.fluid} className="productVisual" alt={post.boardName} />
             </div>
             <div className="col-12 col-md-4">
               <div className={productStyles.productTitle}>
-                {post.boardName}<br />
-                {/* post.availability */}
-                {post.subCategory}
+                <span>{post.boardName}</span>
+                { post.availability }
+                <span>{post.subCategory}</span>
               </div>
               <span className={productStyles.productPrice}>{post.price}</span>
               <p className={productStyles.productShipping}>
@@ -110,6 +101,7 @@ export const query = graphql`
       subCategory
       availability
       details
+      subCategorySlug
       url
     }
     
@@ -131,7 +123,6 @@ export const query = graphql`
           subCategory
           availability
           url
-          slug
         }
       }
     }
