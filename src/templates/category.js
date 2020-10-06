@@ -11,7 +11,9 @@ import categoryStyles from "./category.module.scss"
 export default function Category({ data }) {
   const listItems = data.allFilters.distinct.map((filter) =>
     <li key={filter}>
-      <Link to={ '../'+ filter.replace(/\s+/g, '-').toLowerCase() }>{filter}</Link>
+      <Link to={ '../'+ filter.replace(/\s+/g, '-').toLowerCase() }>
+        {filter}
+      </Link>
     </li>
   );
 
@@ -42,7 +44,7 @@ export default function Category({ data }) {
               </ul>
             </div>
             <div className="col-12 col-md-9">
-              <div className="row">
+              <div className="row rowContent">
               {data.category.edges.map(({ node }, index) => (
                 <div className="col-6 col-lg-4" key={index}>
                   <Card

@@ -52,7 +52,7 @@ export default function Home({ data }) {
         </Container>
 
         <ContainerFluid>
-          <Img fluid={data.imageThree.childImageSharp.fluid} className="center mw1110" alt="lorem" />
+          <Img fluid={data.imageThree.childImageSharp.fluid} className="center mw930" alt="lorem" />
         </ContainerFluid>
       </section>
     </Layout>
@@ -84,7 +84,7 @@ export const pageQuery = graphql`
     imageThree: file(relativePath: { eq: "apropos_easyconcept.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1110
+          maxWidth: 930
           traceSVG: { background: "#f6f6f6", color: "#888" }
           ) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG

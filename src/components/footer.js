@@ -1,6 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook, faInstagram, faPinterest } from "@fortawesome/free-brands-svg-icons"
 import Container from "./container"
 import footerStyles from "./footer.module.scss"
 
@@ -72,7 +74,20 @@ export default function Footer() {
 
       <footer className={footerStyles.footer}>
         <Container>
-          Footer
+          <ul className={footerStyles.socialNav}>
+            <li>
+              <Link to="/"><FontAwesomeIcon icon={faFacebook} /></Link>
+            </li>
+            <li>
+              <Link to="/"><FontAwesomeIcon icon={faInstagram} /></Link>
+            </li>
+            <li>
+              <Link to="/"><FontAwesomeIcon icon={faPinterest} /></Link>
+            </li>
+          </ul>
+          <p className={footerStyles.copyright}>
+            ©Baise-en-ville Skateboards - Tous droits réservés
+          </p>
         </Container>
       </footer>
     </div>

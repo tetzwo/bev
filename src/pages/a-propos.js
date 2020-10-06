@@ -7,22 +7,16 @@ import Container from "../components/container"
 import ContainerFluid from "../components/container-fluid"
 import Highlight from "../components/highlight"
 import Breadcrumb from "../components/breadcrumb"
-import Video from "../components/video"
 
 export default function Apropos({ data }) {
   return (
     <Layout>
-      <SEO title="A propos" />
+      <SEO title="à propos" />
       <Highlight highlightText="handmade in France" highlightClass="highlight-a-propos" />
 
       <section>
         <Container>
           <Breadcrumb current="à propos" />
-
-          <Video
-            videoSrcURL="https://www.youtube.com/watch?v=w89nQzJeBV0&t=1s&ab_channel=BeBetterParis"
-            videoTitle="Baise-en-Ville Breaksdown the Skateboard (subtitles in english)"
-          />
           
           <div className="row rowAlignCenter">
             <div className="col-12 col-md-6 colContent">
@@ -52,7 +46,7 @@ export default function Apropos({ data }) {
         </Container>
 
         <ContainerFluid>
-          <Img fluid={data.imageTwo.childImageSharp.fluid} className="center mw1110" alt="lorem" />
+          <Img fluid={data.imageTwo.childImageSharp.fluid} className="center mw930" alt="lorem" />
         </ContainerFluid>
       </section>
     </Layout>
@@ -74,7 +68,7 @@ export const pageQuery = graphql`
     imageTwo: file(relativePath: { eq: "apropos_profil.jpg" }) {
       childImageSharp {
         fluid(
-          maxWidth: 1110
+          maxWidth: 930
           traceSVG: { background: "#f6f6f6", color: "#888" }
           ) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG

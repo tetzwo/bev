@@ -38,7 +38,7 @@ export default function Shop({ data }) {
               </ul>
             </div>
             <div className="col-12 col-md-9">
-              <div className="row">
+              <div className="row rowContent">
               {data.allProductCard.edges.map(({ node }, index) => (
                 <div className="col-6 col-lg-4" key={index}>
                   <Card

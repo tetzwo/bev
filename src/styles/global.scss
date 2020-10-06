@@ -26,8 +26,8 @@ img {
 .center {
   margin: 0 auto;
 }
-.mw1110 {
-  width: 1110px;
+.mw930 {
+  width: 930px;
   max-width: 100%;
 }
 
@@ -145,6 +145,10 @@ p:last-child {
       text-decoration: none;
     }
   }
+}
+
+.rowContent {
+  margin-bottom: -30px;
 }
 
 .productVisual {
