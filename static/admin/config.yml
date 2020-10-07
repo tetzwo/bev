@@ -6,21 +6,30 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
   - name: products
     label: Products
-    file: "blog/products.yml"
+    folder: src/data
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: boardName, label: Board name }
+      - {
+          name: category,
+          label: Category,
+          widget: "select",
+          options: ["board", "mounted"]
+        }
+      - {
+          name: subCategory,
+          label: Sub Category,
+          widget: "select",
+          options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser"]
+        }
+      - {
+          name: availability,
+          label: Availability,
+          widget: "select",
+          options: ["disponible", "plus disponible", "sur commande"]
+        }
+      - { name: price, label: Price }
+      - { name: details, label: Details, widget: "text" }
+      - { name: image, label: Image, widget: "image" }
