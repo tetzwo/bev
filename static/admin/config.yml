@@ -2,7 +2,7 @@ backend:
   name: github
   repo: tetzwo/bev
 
-media_folder: static/assets
+media_folder: src/images
 public_folder: /assets
 
 collections:
@@ -10,6 +10,7 @@ collections:
     label: Products
     folder: src/data
     create: true
+    format: json
     fields:
       - { name: boardName, label: Board name }
       - {
