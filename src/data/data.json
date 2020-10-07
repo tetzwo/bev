@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "boardName": "go Paris",
     "category": "board",
     "subCategory": "planche cruiser",
@@ -10,7 +9,6 @@
     "image": "deck_goparis_00.jpg"
   },
   {
-    "id": 2,
     "boardName": "hipster",
     "category": "board",
     "subCategory": "planche cruiser",
@@ -20,7 +18,6 @@
     "image": "deck_hipster_00.jpg"
   },
   {
-    "id": 3,
     "boardName": "keepcalm",
     "category": "board",
     "subCategory": "planche cruiser",
@@ -30,7 +27,6 @@
     "image": "deck_keepcalm_00.jpg"
   },
   {
-    "id": 4,
     "boardName": "ballerine",
     "category": "board",
     "subCategory": "planche cruiser",
@@ -40,7 +36,6 @@
     "image": "deck_ballerine_00.jpg"
   },
   {
-    "id": 5,
     "boardName": "coco",
     "category": "board",
     "subCategory": "planche cruiser",
@@ -50,7 +45,6 @@
     "image": "deck_coco_00.jpg"
   },
   {
-    "id": 6,
     "boardName": "love me",
     "category": "board",
     "subCategory": "planche cruiser",
@@ -60,7 +54,6 @@
     "image": "deck_loveme_00.jpg"
   },
   {
-    "id": 7,
     "boardName": "top to bottom 2017",
     "category": "board",
     "subCategory": "planche cruiser",
@@ -70,7 +63,6 @@
     "image": "deck_toptobottom_00.jpg"
   },
   {
-    "id": 8,
     "boardName": "go Paris",
     "category": "mounted",
     "subCategory": "cruiser set classic",
@@ -80,7 +72,6 @@
     "image": "setclassic_goparis_01.jpg"
   },
   {
-    "id": 9,
     "boardName": "hipster",
     "category": "mounted",
     "subCategory": "cruiser set classic",
@@ -90,7 +81,6 @@
     "image": "setclassic_hipster_01.jpg"
   },
   {
-    "id": 10,
     "boardName": "go Paris",
     "category": "mounted",
     "subCategory": "cruiser set mama",
@@ -100,7 +90,6 @@
     "image": "setmama_goparis_01.jpg"
   },
   {
-    "id": 11,
     "boardName": "hipster",
     "category": "mounted",
     "subCategory": "cruiser set mama",
@@ -110,7 +99,6 @@
     "image": "setmama_hipster_01.jpg"
   },
   {
-    "id": 12,
     "boardName": "allumette",
     "category": "mounted",
     "subCategory": "vintage cruiser",
@@ -120,7 +108,6 @@
     "image": "vintage_allumette_00.jpg"
   },
   {
-    "id": 13,
     "boardName": "ein nachbar #1",
     "category": "mounted",
     "subCategory": "vintage cruiser",
@@ -130,7 +117,6 @@
     "image": "vintage_nachbarshaft1_00.jpg"
   },
   {
-    "id": 14,
     "boardName": "ein nachbar #2",
     "category": "mounted",
     "subCategory": "vintage cruiser",
@@ -140,7 +126,6 @@
     "image": "vintage_nachbarshaft2_00.jpg"
   },
   {
-    "id": 15,
     "boardName": "ein nachbar #3",
     "category": "mounted",
     "subCategory": "vintage cruiser",

@@ -5,9 +5,8 @@ const IMAGE_PATH = './src/images/';
 // https://freddydumont.com/blog/how-to-source-images-and-data-from-json-files-in-gatsby
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   products.forEach((card) => {
-    // 1. Extract the card data from the original json
+    // Extract the card data from the original json
     const {
-      id,
       boardName,
       category,
       subCategory,
@@ -17,11 +16,11 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       image
     } = card;
 
-    // 1. name, extension and absolute path are required to build a File node
+    // name, extension and absolute path are required to build a File node
     const { name, ext } = path.parse(image);
     const absolutePath = path.resolve(__dirname, IMAGE_PATH, image);
 
-    // 2. Build a data shape that corresponds to a File node that Sharp can process
+    // Build a data shape that corresponds to a File node that Sharp can process
     const data = {
       name,
       ext,
@@ -29,7 +28,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       extension: ext.substring(1), // <-- required, remove the dot in `ext`
     };
 
-    // 3. Build the image node using our data
+    // Build the image node using our data
     const imageNode = {
       ...data,
       id: createNodeId(`card-image-${name}`),
@@ -39,14 +38,12 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       },
     };
 
-    // 4. Create the node. When imageNode is created,
-    //    Sharp adds childImageSharp to the node
+    // Create the node. When imageNode is created, Sharp adds childImageSharp to the node
     actions.createNode(imageNode);
 
-    // 2. Build the ProductCard node. Note that most fields simply correspond to
-    //    to our JSON data.
+    // Build the ProductCard node. Note that most fields simply correspond to our JSON data.
     const node = {
-      id: createNodeId(`card-${id}`),
+      id: createNodeId(`card-${name}`),
       boardName,
       category,
       subCategory,
