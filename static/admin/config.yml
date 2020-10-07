@@ -3,7 +3,7 @@ backend:
   repo: tetzwo/bev
 
 media_folder: src/images
-public_folder: /assets
+# public_folder: /assets
 
 collections:
   - name: products
@@ -11,6 +11,7 @@ collections:
     folder: src/data
     create: true
     format: json
+    file: "src/data/cms.json"
     fields:
       - { name: boardName, label: Board name }
       - {
