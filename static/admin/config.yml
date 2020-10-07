@@ -8,7 +8,7 @@ public_folder: /static/
 collections:
   - name: products
     label: Products
-    folder: src/data
+    folder: src/cms
     create: true
     format: json
     fields:
