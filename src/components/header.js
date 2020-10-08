@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+// import TransitionLink from "gatsby-plugin-transition-link"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Container from "./container"
 import headerStyles from "./header.module.scss"
 

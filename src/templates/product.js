@@ -11,6 +11,8 @@ import productStyles from "./product.module.scss"
 
 export default function Product({ data }) {
   const post = data.productCard
+  const availability = post.availability !== "disponible" ?
+    '['+ post.availability +']' : '';
 
   return (
     <Layout>
@@ -41,7 +43,7 @@ export default function Product({ data }) {
             <div className="col-12 col-md-4">
               <div className={productStyles.productTitle}>
                 <span>{post.boardName}</span>
-                { post.availability }
+                { availability }
                 <span>{post.subCategory}</span>
               </div>
               <span className={productStyles.productPrice}>{post.price}</span>

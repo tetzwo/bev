@@ -3,7 +3,7 @@ backend:
   repo: tetzwo/bev
 
 media_folder: src/images
-public_folder: /static/
+public_folder: /pouet/
 
 collections:
   - name: products
@@ -13,24 +13,18 @@ collections:
     format: json
     fields:
       - { name: boardName, label: Board name }
-      - {
-          name: category,
-          label: Category,
-          widget: "select",
-          options: ["board", "mounted"]
-        }
-      - {
-          name: subCategory,
-          label: Sub Category,
-          widget: "select",
-          options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser"]
-        }
-      - {
-          name: availability,
-          label: Availability,
-          widget: "select",
-          options: ["disponible", "plus disponible", "sur commande"]
-        }
+      - name: category,
+        label: Category,
+        widget: "select",
+        options: ["board", "mounted"]
+      - name: subCategory,
+        label: Sub Category,
+        widget: "select",
+        options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser"]
+      - name: availability,
+        label: Availability,
+        widget: "select",
+        options: ["disponible", "plus disponible", "sur commande"]
       - { name: price, label: Price }
       - { name: details, label: Details, widget: "text" }
       - { name: image, label: Image, widget: "image" }
