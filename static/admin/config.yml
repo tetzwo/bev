@@ -3,7 +3,7 @@ backend:
   repo: tetzwo/bev
 
 media_folder: src/images
-public_folder: /pouet/
+public_folder: ""
 
 collections:
   - name: products
