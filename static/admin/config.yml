@@ -34,3 +34,9 @@ collections:
       - { name: price, label: Price }
       - { name: details, label: Details, widget: "text" }
       - { name: image, label: Image, widget: "image" }
+      - {
+          name: gallery,
+          label: Gallery,
+          widget: "list",
+          field: {label: Visual, name: visual, widget: image }
+        }

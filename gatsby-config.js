@@ -18,15 +18,15 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         // Available options and their defaults:
-        useMozJpeg: true,
+        useMozJpeg: false,
         stripMetadata: true,
-        defaultQuality: 90
+        defaultQuality: 80
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Baise-en-ville Sakteboards`,
+        name: `Baise-en-ville Skateboards`,
         short_name: `BEV`,
         start_url: `/`,
         background_color: `#6b37bf`,
