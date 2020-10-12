@@ -13,14 +13,6 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    // `gatsby-transformer-json`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `cms`,
-    //     path: `${__dirname}/src/cms/`,
-    //   },
-    // },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
