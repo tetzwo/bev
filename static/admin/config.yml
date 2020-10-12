@@ -20,6 +20,7 @@ collections:
           - label: Product
             name: product
             widget: list
+            summary: '{{fields.boardName}} {{fields.subCategory}}'
             fields:
               # - {label: Name, name: name, widget: string}
               # - {label: Position, name: position, widget: string}
