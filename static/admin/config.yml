@@ -6,37 +6,97 @@ media_folder: src/images
 public_folder: ""
 
 collections:
-  - name: products
-    label: Products
-    folder: src/cms
+  - label: "BEV"
+    name: "bev"
+    # folder: src/cms
     create: true
     format: json
-    fields:
-      - { name: boardName, label: Board name }
-      - {
-          name: category,
-          label: Category,
-          widget: "select",
-          options: ["board", "mounted"]
-        }
-      - {
-          name: subCategory,
-          label: Sub Category,
-          widget: "select",
-          options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser"]
-      }
-      - {
-          name: availability,
-          label: Availability,
-          widget: "select",
-          options: ["disponible", "plus disponible", "sur commande"]
-        }
-      - { name: price, label: Price }
-      - { name: details, label: Details, widget: "text" }
-      - { name: image, label: Image, widget: "image" }
-      - {
-          name: gallery,
-          label: Gallery,
-          widget: "list",
-          field: {label: Visual, name: visual, widget: image }
-        }
+    files:
+      - label: "Products"
+        name: "products"
+        file: "src/cms/data.json"
+        fields:
+          # - {label: Title, name: title, widget: string}
+          - label: Product
+            name: product
+            widget: list
+            fields:
+              # - {label: Name, name: name, widget: string}
+              # - {label: Position, name: position, widget: string}
+              # - {label: Photo, name: photo, widget: image}
+              - { name: boardName, label: Board name }
+              - {
+                  name: category,
+                  label: Category,
+                  widget: "select",
+                  options: ["board", "mounted"]
+                }
+              - {
+                  name: subCategory,
+                  label: Sub Category,
+                  widget: "select",
+                  options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser"]
+                }
+              - {
+                  name: availability,
+                  label: Availability,
+                  widget: "select",
+                  options: ["disponible", "plus disponible", "sur commande"]
+                }
+              - { name: price, label: Price }
+              - { name: details, label: Details, widget: "text" }
+              - { name: image, label: Image, widget: "image" }
+              - {
+                  name: gallery,
+                  label: Gallery,
+                  widget: "list",
+                  field: {label: Visual, name: visual, widget: image }
+                }
+      # - label: "Locations Page"
+      #   name: "locations"
+      #   file: "site/content/locations.yml"
+      #   fields:
+      #     - {label: Title, name: title, widget: string}
+      #     - {label: Intro, name: intro, widget: markdown}
+      #     - label: Locations
+      #       name: locations
+      #       widget: list
+      #       fields:
+      #         - {label: Name, name: name, widget: string}
+      #         - {label: Address, name: address, widget: string}
+
+# collections:
+#   - name: products
+#     label: Products
+#     folder: src/cms
+#     create: true
+#     format: json
+#     fields:
+#       - { name: boardName, label: Board name }
+#       - {
+#           name: category,
+#           label: Category,
+#           widget: "select",
+#           options: ["board", "mounted"]
+#         }
+#       - {
+#           name: subCategory,
+#           label: Sub Category,
+#           widget: "select",
+#           options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser"]
+#       }
+#       - {
+#           name: availability,
+#           label: Availability,
+#           widget: "select",
+#           options: ["disponible", "plus disponible", "sur commande"]
+#         }
+#       - { name: price, label: Price }
+#       - { name: details, label: Details, widget: "text" }
+#       - { name: image, label: Image, widget: "image" }
+#       - {
+#           name: gallery,
+#           label: Gallery,
+#           widget: "list",
+#           field: {label: Visual, name: visual, widget: image }
+#         }

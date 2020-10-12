@@ -24,8 +24,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     const data = {
       name,
       ext,
-      absolutePath, // <-- required
-      extension: ext.substring(1), // <-- required, remove the dot in `ext`
+      absolutePath, // required
+      extension: ext.substring(1), // required, remove the dot in `ext`
     };
 
     // Build the image node using our data

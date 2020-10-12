@@ -13,11 +13,18 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    // `gatsby-transformer-json`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `cms`,
+    //     path: `${__dirname}/src/cms/`,
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        // Available options and their defaults:
         useMozJpeg: false,
         stripMetadata: true,
         defaultQuality: 80
