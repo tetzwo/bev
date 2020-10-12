@@ -25,13 +25,13 @@ collections:
                   name: category,
                   label: Category,
                   widget: "select",
-                  options: ["board", "mounted"]
+                  options: ["board", "mounted", "equipments", "accessories"]
                 }
               - {
                   name: subCategory,
                   label: Sub Category,
                   widget: "select",
-                  options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser"]
+                  options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser", "equipments", "accessories"]
                 }
               - {
                   name: availability,
