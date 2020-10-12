@@ -24,6 +24,27 @@ export default function Contact() {
                 <br />
                 contact@baise-en-ville-skateboards.com
               </p>
+
+              <form name="contact" method="post" data-netlify="true">
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>   
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Your Role: <select name="role[]" multiple>
+                    <option value="leader">Leader</option>
+                    <option value="follower">Follower</option>
+                  </select></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
             </div>
             <div className="col-12 col-md-4">
               <h2>depuis Paris</h2>
