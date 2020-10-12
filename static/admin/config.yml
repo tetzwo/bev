@@ -8,23 +8,18 @@ public_folder: ""
 collections:
   - label: "BEV"
     name: "bev"
-    # folder: src/cms
     create: true
     format: json
     files:
       - label: "Products"
         name: "products"
-        file: "src/cms/data.json"
+        file: "src/data/data.json"
         fields:
-          # - {label: Title, name: title, widget: string}
           - label: Product
             name: product
             widget: list
             summary: '{{fields.boardName}} - {{fields.subCategory}}'
             fields:
-              # - {label: Name, name: name, widget: string}
-              # - {label: Position, name: position, widget: string}
-              # - {label: Photo, name: photo, widget: image}
               - { name: boardName, label: Board name }
               - {
                   name: category,

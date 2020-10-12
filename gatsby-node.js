@@ -4,7 +4,7 @@ const IMAGE_PATH = './src/images/';
 
 // https://freddydumont.com/blog/how-to-source-images-and-data-from-json-files-in-gatsby
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
-  products.forEach((card) => {
+  products.product.forEach((card) => {
     // Extract the card data from the original json
     const {
       boardName,
