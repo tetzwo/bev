@@ -6,13 +6,13 @@ media_folder: src/images
 public_folder: ""
 
 collections:
-  - label: "BEV"
-    name: "bev"
+  - label: BEV
+    name: bev
     create: true
     format: json
     files:
-      - label: "Products"
-        name: "products"
+      - label: Products
+        name: products
         file: "src/data/data.json"
         fields:
           - label: Product
@@ -24,29 +24,29 @@ collections:
               - {
                   name: category,
                   label: Category,
-                  widget: "select",
+                  widget: select,
                   options: ["board", "mounted", "equipments", "accessories"]
                 }
               - {
                   name: subCategory,
                   label: Sub Category,
-                  widget: "select",
+                  widget: select,
                   options: ["planche cruiser", "cruiser set classic", "cruiser set mama", "vintage cruiser", "equipments", "accessories"]
                 }
               - {
                   name: availability,
                   label: Availability,
-                  widget: "select",
+                  widget: select,
                   options: ["disponible", "plus disponible", "sur commande"]
                 }
               - { name: price, label: Price }
-              - { name: details, label: Details, widget: "text" }
-              - { name: image, label: Image, widget: "image" }
+              - { name: details, label: Details, widget: text }
+              - { name: image, label: Image, widget: image }
               - {
                   name: gallery,
                   label: Gallery,
-                  widget: "list",
-                  field: {label: Visual, name: visual, widget: image }
+                  widget: list,
+                  field: { name: visual, label: Visual, widget: image }
                 }
       # - label: "Locations Page"
       #   name: "locations"
