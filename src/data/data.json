@@ -143,6 +143,15 @@
       "price": "150€",
       "details": "Le prix indiqué est pour la planche seule, possibilité d’ajouter un set classic ou mama. Série produite à la mains, posca et marquage logo à chaud. Motif unique qui reprend les veines du bois. Planche 7 plis érable Nord-Américain, shape Baise-en-ville 7.7 et trou dans le nose.",
       "image": "deck_wood01_00.jpg"
+    },
+    {
+      "boardName": "tote bag Baise-en-ville",
+      "category": "accessories",
+      "subCategory": "accessories",
+      "availability": "disponible",
+      "price": "15€",
+      "details": "Tote bag 100% coton, logo Baise-en-ville sériegraphié, finition Posca.",
+      "image": "accessoires_totebag_00.jpg"
     }
   ]
 }
